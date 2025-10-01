@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerPilot - Smart Job Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🚀 CareerPilot</h1>
+    <p>Track your applications. Stay ahead. Land your dream job.</p>
+  </header>
+
+  <!-- Add Job Form -->
+  <section class="form-section">
+    <h2>Add a New Job</h2>
+    <form id="jobForm">
+      <input type="text" id="company" placeholder="Company Name" required />
+      <input type="text" id="role" placeholder="Role" required />
+      <select id="status" required>
+        <option value="Applied">Applied</option>
+        <option value="Interviewing">Interviewing</option>
+        <option value="Offered">Offered</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+      <div class="form-buttons">
+        <button type="submit" id="submitBtn">Add Job</button>
+        <button type="button" id="discardBtn" style="display:none;">Discard</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Search -->
+  <section class="search-section">
+    <input type="text" id="searchBox" placeholder="🔍 Search by company or role...">
+  </section>
+
+  <!-- Job List -->
+  <section class="jobs-section">
+    <h2>My Applications</h2>
+    <ul id="jobList"></ul>
+  </section>
+
+  <!-- Dashboard -->
+  <section class="dashboard">
+    <h2>Application Insights</h2>
+
+    <!-- Summary Cards -->
+    <div class="summary-cards">
+      <div class="card applied">Applied: <span id="appliedCount">0</span></div>
+      <div class="card interviewing">Interviewing: <span id="interviewingCount">0</span></div>
+      <div class="card offered">Offered: <span id="offeredCount">0</span></div>
+      <div class="card rejected">Rejected: <span id="rejectedCount">0</span></div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-container">
+      <canvas id="statusChart"></canvas>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>✨ Built with passion | CareerPilot ✨</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
